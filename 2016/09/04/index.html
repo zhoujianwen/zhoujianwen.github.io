@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=http://www.zhoujianwen.cn/outdatedbrowser/lang/zh-cn.html" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="zhoujianwen" />
+
+
+
+<meta name="description" content="1.什么是GitHubGitHub是为开发者提供Git仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。
+2.GitHub与Git的关系GitHub与Git是完全不同的两个东西。在Git中，开发者将源代码存入名叫”Git仓库“的资料库中并加以使用。而GitHub则是在网络上提供Git仓库的一项服务。也就是说，GitHub上公开的软件源代码全都 由Git进行管理。理解Gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub配置与使用总结(持续更新)">
+<meta property="og:url" content="http://www.zhoujianwen.cn/2016/09/04/index.html">
+<meta property="og:site_name" content="小舟技术博客">
+<meta property="og:description" content="1.什么是GitHubGitHub是为开发者提供Git仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。
+2.GitHub与Git的关系GitHub与Git是完全不同的两个东西。在Git中，开发者将源代码存入名叫”Git仓库“的资料库中并加以使用。而GitHub则是在网络上提供Git仓库的一项服务。也就是说，GitHub上公开的软件源代码全都 由Git进行管理。理解Gi">
+<meta property="og:updated_time" content="2016-09-28T06:07:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub配置与使用总结(持续更新)">
+<meta name="twitter:description" content="1.什么是GitHubGitHub是为开发者提供Git仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。
+2.GitHub与Git的关系GitHub与Git是完全不同的两个东西。在Git中，开发者将源代码存入名叫”Git仓库“的资料库中并加以使用。而GitHub则是在网络上提供Git仓库的一项服务。也就是说，GitHub上公开的软件源代码全都 由Git进行管理。理解Gi">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="小舟技术博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>GitHub配置与使用总结(持续更新) | 小舟技术博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined,
+        overlayList: "none, http://qncdn.zhoujianwen.cn/blog/image/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg, http://qncdn.zhoujianwen.cn/blog/image/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg"
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7712580052125128605";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="http://qncdn.zhoujianwen.cn/blog/image/IMG_20160502_174626.0026.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Clement</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">如果丢掉盔甲，我依然是骄傲帅气的骑士。</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="fa fa-home fa-2x"></div>
+                            <div class=""></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="fa fa-tags fa-2x"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="fa fa-connectdevelop fa-2x"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="fa fa-user fa-2x"></div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa fa-github bds_github" href="http://github.com/zhoujianwen" title="GitHub"></a>
+                            
+                                <a class="fa fa-envelope bds_envelope" href="mailto:developer@zhoujianwen.cn" title="Mail"></a>
+                            
+                                <a class="fa fa-weixin bds_weixin" href="/image/mmqrcode1471547682838.png" title="WeiXin"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HigherMathematics/">HigherMathematics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qrsbox/">qrsbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/七牛/">七牛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虚拟机/">虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://yuguo.us/">Yuguo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/">ruanyifeng</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">擅长前端各项技能，喜欢折腾新技术，对JavaScript/Html/CSS相关客户端、服务端（Java/Node.js）以及数据库(MYSQL/SQLServer)知识很感兴趣。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div> 
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Clement</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="http://qncdn.zhoujianwen.cn/blog/image/IMG_20160502_174626.0026.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Clement</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">如果丢掉盔甲，我依然是骄傲帅气的骑士。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                         
+                                <a class="fa fa-github bds_github" href="http://github.com/zhoujianwen" title="GitHub"></a>
+                            
+                                <a class="fa fa-envelope bds_envelope" href="mailto:developer@zhoujianwen.cn" title="Mail"></a>
+                            
+                                <a class="fa fa-weixin bds_weixin" href="/image/mmqrcode1471547682838.png" title="WeiXin"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-2016-09-2016-09-04" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/04/" class="article-date">
+      <time datetime="2016-09-04T03:18:00.000Z" itemprop="datePublished">2016-09-04</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GitHub配置与使用总结(持续更新)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="1-什么是GitHub"><a href="#1-什么是GitHub" class="headerlink" title="1.什么是GitHub"></a>1.什么是GitHub</h3><p>GitHub是为开发者提供Git仓库的托管服务。这是一个让开发者与朋友、同事、同学及陌生人共享代码的完美场所。</p>
+<h3 id="2-GitHub与Git的关系"><a href="#2-GitHub与Git的关系" class="headerlink" title="2.GitHub与Git的关系"></a>2.GitHub与Git的关系</h3><p>GitHub与Git是完全不同的两个东西。在Git中，开发者将源代码存入名叫”Git仓库“的资料库中并加以使用。而GitHub则是在网络上提供Git仓库的一项服务。也就是说，GitHub上公开的软件源代码全都 由Git进行管理。理解Git是熟练运用GitHub的关键所在。<br><a id="more"></a></p>
+<h3 id="3-使用GitHub，必须要安装Git"><a href="#3-使用GitHub，必须要安装Git" class="headerlink" title="3.使用GitHub，必须要安装Git"></a>3.使用GitHub，必须要安装Git</h3><p>由于在Windwos环境中并没有默认安装Git，所以需要到<a href="https://git-scm.com/" target="_blank" rel="external">git官网</a>下载安装。而最近的osx系统都是默认预装了Git，可以直接在终端使用。安装完之后，接下来对Git进行设置。</p>
+<h3 id="4-Git初始设置"><a href="#4-Git初始设置" class="headerlink" title="4.Git初始设置"></a>4.Git初始设置</h3><p>4.1设置姓名和邮箱地址，这里设置的姓名和邮箱地址在你每次向git仓库提交数据时都会附加在Git提交的日志中，可以通过日志查询到哪个人向仓库中提供了最新记录。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">zhoujianwendeMacBook-Air:github zhoujianwen.cn$ git config --global user.name &apos;zhoujianwen&apos;</div><div class="line">zhoujianwendeMacBook-Air:github zhoujianwen.cn$ git config --global user.email &apos;zhou_jianwen@qq.com&apos;</div><div class="line">zhoujianwendeMacBook-Air:github zhoujianwen.cn$</div></pre></td></tr></table></figure></p>
+<p>当然，user.name可以设置你的真名或昵称都可以，user.email最好是github帐号的注册邮箱，重复以上步骤会将原来的填写的信息刷写。<br>为了提高命令输出的可读生，可以输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zhoujianwendeMacBook-Air:github zhoujianwen.cn$ git config --global color.ui auto</div></pre></td></tr></table></figure></p>
+<p>这样一来，各种命令的输出就会变得更容易分辨。</p>
+<h3 id="5-设置SSH-Key"><a href="#5-设置SSH-Key" class="headerlink" title="5.设置SSH Key"></a>5.设置SSH Key</h3><p>GitHub上连接已有仓库时的认证，是通过使用了SSH的公开密钥认证方式进行的。现在让我们来创建公开密钥认证所需的SSH Key，并将其添加至GitHub。已经创建过的同学，请用现有的密钥进行设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</div><div class="line">回车之后输入密码</div><div class="line">回车之后再次输入确认密码</div></pre></td></tr></table></figure></p>
+<p>“your_email@example.com”是你github的注册帐号。<br>设置SSH成功之后就会分别生成id_rsa和id_rsa.pub这两个文件。<br>其中id_rsa是私有密钥，id_rsa.pub是公开密钥。<br>然后将id_rsa.pub公开密钥的内容添加到GitHub-&gt;Setting-&gt;SSH and GPG keys中，添加成功之后，创建github账户时所用的邮箱会接到一封“公开密钥添加完成”的邮件。<br>完成以上设置后，就可以用手中的私人密钥与GitHub进行认证和通信了。<br>输入以下命令进行通信测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>然后输入之前设置私人密钥的密码进行认证就可以了。</p>
+<p>###本地仓库与远程仓库的关系<br>在本地仓库还没有与远程仓库产生关联（绑定）在一起的时候，本地仓库所有的操作都是只对本地仓库产生影响，并不会同步到github上的远程仓库。</p>
+<p>1、如何创建本地仓库<br>Git是使用git init命令对实际建立的文件目录进行本地仓库初始化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir git-tutorial</div><div class="line">cd git-tutorial</div><div class="line">git init</div></pre></td></tr></table></figure></p>
+<p>初始化成功之后，执行了git init命令的目录下就会生成.git目录。这个.git目录里存储着管理当前目录内容所需的仓库数据。<br>然后就可以在本地仓库上添加文件，我往刚才创建git-tutorial文件夹下添加22222.jpg，添加完之后可以执行git status命令查看仓库状态。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">On branch master</div><div class="line"></div><div class="line">Initial commit</div><div class="line"></div><div class="line">nothing to commit (create/copy files and use &quot;git add&quot; to track)</div><div class="line">zhoujianwendeMacBook-Air:git-tutorial zhoujianwen.cn$ git status</div><div class="line">On branch master</div><div class="line"></div><div class="line">Initial commit</div><div class="line"></div><div class="line">Untracked files:</div><div class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</div><div class="line"></div><div class="line">	22222.jpg</div><div class="line"></div><div class="line">nothing added to commit but untracked files present (use &quot;git add&quot; to track)</div></pre></td></tr></table></figure></p>
+<p>虽然刚才往本地仓库添加了一个文件，但是该文件并不会被记入Git仓库的版本管理对象当中。要想让文件成为Git仓库的管理对象，就需要用git add命令将其加入暂存区，暂存区是一个临时区域。如果你添加了N个文件，你可以使用git add –all将所有添加文件都加入暂存区。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add --all</div><div class="line">git status</div></pre></td></tr></table></figure></p>
+<p>此时git status命令显示结果发生了变化。现在根据提示需要用git commit命令可以将当前暂存区中的文件实际保存到仓库的历史记录中。通过这些记录，我们就可以在工作树中复原文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;first commit&quot;</div></pre></td></tr></table></figure></p>
+<p>-m参数后的”first commit”称作提交信息，是对这个提交的概述。每次往本地仓库提交数据时，都必需重复以上操作git add –all和git commit -m “概述内容”<br>git log   查看提交日志信息，你每次git commit之后，都会被git日志记录，你可以通过git log查询commit生成序列号，可以通过这串序列号来将本地仓库回溯到之前版本。<br>git diff HEAD  查看更改前后的差别，另外按command+t可以快速新建终端窗口。</p>
+<h3 id="6-分支操作"><a href="#6-分支操作" class="headerlink" title="6.分支操作"></a>6.分支操作</h3><p>刚才创建的本地仓库默认只有一个分支 —— master<br>git branch 显示分支一览表<br>如果想以当前的master分支为基础创建新的分支，我们需要用到<br>git checkout -b ‘分支名称’  ，它的作用相当于创建新分支并将当前master分支切换到新分支中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">zhoujianwendeMacBook-Air:git-tutorial zhoujianwen.cn$ git checkout -b &apos;feature-A&apos;</div><div class="line">Switched to a new branch &apos;feature-A&apos;</div><div class="line">zhoujianwendeMacBook-Air:git-tutorial zhoujianwen.cn$ git branch</div><div class="line">* feature-A</div><div class="line">  master</div><div class="line">zhoujianwendeMacBook-Air:git-tutorial zhoujianwen.cn$</div></pre></td></tr></table></figure></p>
+<p> git checkout -b ‘分支名称’ 等同于<br> git branch ‘分支名称’ 创建分支<br> git checkout ‘分支名称’ 切换分支</p>
+<p>切换feature-A分支成功之后，你可以继续往本地仓库提交数据，feature-A分支所在本地仓库上所有操作更改都不会影响到master支支，这正是在开发中创建分支的优点。只要创建多个分支，就可以在不互相影响的情况下同时进行多个功能的开发。</p>
+<p>切换回上一个分支可以git checkout - ，也可以git checkout ‘master’</p>
+
+      
+    </div>
+    
+  </div>
+  
+    <style>
+ a.supportme {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  font-size: 30px;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  -webkit-user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  border: 1px solid #f1b60e;
+  border-radius: 50%;
+  background: #fccd60; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: quote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccd60', endColorstr='#2989d8',GradientType=1 )"); /* IE6-9 fallback on horizontal gradient */
+  margin-left: -30px;
+  transition: all 0.3s;
+}
+a.supportme:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #2989d8; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: quote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#fccd60',GradientType=1 )"); /* IE6-9 fallback on horizontal gradient */
+  transition: all 0.3s;
+}
+.clearfloat{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+</style>
+
+
+    <div class="copyright" style="position:relative;margin-top:30px;">
+      <a href="/about/#supportme" class="supportme">赏</a>
+        <p><span>本文标题:</span><a href="/2016/09/04/">GitHub配置与使用总结(持续更新)</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">zhoujianwen</a></p>
+        <p><span>发布时间:</span>2016-09-04, 11:18:00</p>
+        <p><span>最后更新:</span>2016-09-28, 14:07:49</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/04/" title="GitHub配置与使用总结(持续更新)">http://www.zhoujianwen.cn/2016/09/04/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.zhoujianwen.cn/2016/09/04/　　作者: zhoujianwen" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/09/05/">
+                    html页头设置不缓存
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/09/03/">
+                    七牛的qrsbox命令行工具使用 for osx
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-什么是GitHub"><span class="toc-number">1.</span> <span class="toc-text">1.什么是GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GitHub与Git的关系"><span class="toc-number">2.</span> <span class="toc-text">2.GitHub与Git的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-使用GitHub，必须要安装Git"><span class="toc-number">3.</span> <span class="toc-text">3.使用GitHub，必须要安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Git初始设置"><span class="toc-number">4.</span> <span class="toc-text">4.Git初始设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-设置SSH-Key"><span class="toc-number">5.</span> <span class="toc-text">5.设置SSH Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-分支操作"><span class="toc-number">6.</span> <span class="toc-text">6.分支操作</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"GitHub配置与使用总结(持续更新)　| 小舟技术博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="SOHUCS" sid="http://www.zhoujianwen.cn/2016/09/04/" >
+<script type="text/javascript">
+    (function(){
+        var appid = 'cysF0oFT5';
+        var conf = 'prod_35f5d9cbd64582245565bf5f5934dafd';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/09/05/" title="上一篇: html页头设置不缓存">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/09/03/" title="下一篇: 七牛的qrsbox命令行工具使用 for osx">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/22/">拉格朗日中值定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/21/">罗尔定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/">零点定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/">JavaScript创建对象之理解原型对象(笔记4)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/">JavaScript创建对象之理解原型对象(笔记3)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/">JavaScript创建对象之构造函数模式(笔记2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/08/">JavaScript创建对象之工厂模式(笔记1)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/08/">ECMAScript属性类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/07/">各大互联网公司前端笔试面试题–JavaScript篇(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/06/">Web异步交互技术之iframe</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/">html页头设置不缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/04/">GitHub配置与使用总结(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/03/">七牛的qrsbox命令行工具使用 for osx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/02/">VirtualBox在OSX下无法识别U盘，提示Failed to create a proxy device for the USB device. (Error: VERR_PDM_NO_USB_PORTS).</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/">sublime基本介绍和使用技巧(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/">第一次和大家见面</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/">数据迁移中，敬请期待！</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/05/">css+div解决文字溢出控制显示字数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/">js的defer属性对dom加载的影响</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/29/">Web前端开发学习教程</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <style>
+    i.police{  
+    display: inline-block;
+  width: 14px;
+  height: 16px;
+  margin-right: 6px;
+  background: url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/icon-police.png?v=md5') 0 0 no-repeat;
+  vertical-align: middle;
+  margin-top: -4px;
+</style>
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+           <p>
+                CopyRight <i class="fa fa-copyright"></i> 
+                2015-2017
+                <a href="http://www.zhoujianwen.cn" target="_blank">小舟技术博客</a>
+                Powered by <a href="http://github.com/zhoujianwen" target="_blank">zhoujianwen</a>
+               <a href="http://www.miitbeian.gov.cn/" target="_blank"><i class="police"></i>粤ICP备15023524号-1</a>
+            </p>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<!-- @zhoujianwen-->
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

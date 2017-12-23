@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=http://www.zhoujianwen.cn/outdatedbrowser/lang/zh-cn.html" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="zhoujianwen" />
+
+
+
+<meta name="description" content="数据迁移中，敬请期待！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据迁移中，敬请期待！">
+<meta property="og:url" content="http://www.zhoujianwen.cn/2016/08/28/index.html">
+<meta property="og:site_name" content="小舟技术博客">
+<meta property="og:description" content="数据迁移中，敬请期待！">
+<meta property="og:updated_time" content="2016-08-28T16:43:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据迁移中，敬请期待！">
+<meta name="twitter:description" content="数据迁移中，敬请期待！">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="小舟技术博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>数据迁移中，敬请期待！ | 小舟技术博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined,
+        overlayList: "none, http://qncdn.zhoujianwen.cn/blog/image/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg, http://qncdn.zhoujianwen.cn/blog/image/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg"
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?7712580052125128605";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="http://qncdn.zhoujianwen.cn/blog/image/IMG_20160502_174626.0026.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Clement</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">如果丢掉盔甲，我依然是骄傲帅气的骑士。</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="fa fa-home fa-2x"></div>
+                            <div class=""></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="fa fa-tags fa-2x"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="fa fa-connectdevelop fa-2x"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="fa fa-user fa-2x"></div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa fa-github bds_github" href="http://github.com/zhoujianwen" title="GitHub"></a>
+                            
+                                <a class="fa fa-envelope bds_envelope" href="mailto:developer@zhoujianwen.cn" title="Mail"></a>
+                            
+                                <a class="fa fa-weixin bds_weixin" href="/image/mmqrcode1471547682838.png" title="WeiXin"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HigherMathematics/">HigherMathematics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qrsbox/">qrsbox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/七牛/">七牛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虚拟机/">虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://yuguo.us/">Yuguo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/">ruanyifeng</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">擅长前端各项技能，喜欢折腾新技术，对JavaScript/Html/CSS相关客户端、服务端（Java/Node.js）以及数据库(MYSQL/SQLServer)知识很感兴趣。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div> 
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Clement</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="http://qncdn.zhoujianwen.cn/blog/image/IMG_20160502_174626.0026.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Clement</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">如果丢掉盔甲，我依然是骄傲帅气的骑士。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                         
+                                <a class="fa fa-github bds_github" href="http://github.com/zhoujianwen" title="GitHub"></a>
+                            
+                                <a class="fa fa-envelope bds_envelope" href="mailto:developer@zhoujianwen.cn" title="Mail"></a>
+                            
+                                <a class="fa fa-weixin bds_weixin" href="/image/mmqrcode1471547682838.png" title="WeiXin"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-2016-08-in-preparation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/28/" class="article-date">
+      <time datetime="2016-08-28T15:50:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据迁移中，敬请期待！
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="数据迁移中，敬请期待！"><a href="#数据迁移中，敬请期待！" class="headerlink" title="数据迁移中，敬请期待！"></a>数据迁移中，敬请期待！</h1>
+      
+    </div>
+    
+  </div>
+  
+    <style>
+ a.supportme {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  font-size: 30px;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  -webkit-user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  border: 1px solid #f1b60e;
+  border-radius: 50%;
+  background: #fccd60; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fccd60 0%, #fbae12 100%, #207cca 100%, #2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: quote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccd60', endColorstr='#2989d8',GradientType=1 )"); /* IE6-9 fallback on horizontal gradient */
+  margin-left: -30px;
+  transition: all 0.3s;
+}
+a.supportme:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #2989d8; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #2989d8 0%, #207cca 0%, #fbae12 0%, #fccd60 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: quote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#fccd60',GradientType=1 )"); /* IE6-9 fallback on horizontal gradient */
+  transition: all 0.3s;
+}
+.clearfloat{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+</style>
+
+
+    <div class="copyright" style="position:relative;margin-top:30px;">
+      <a href="/about/#supportme" class="supportme">赏</a>
+        <p><span>本文标题:</span><a href="/2016/08/28/">数据迁移中，敬请期待！</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">zhoujianwen</a></p>
+        <p><span>发布时间:</span>2016-08-28, 23:50:00</p>
+        <p><span>最后更新:</span>2016-08-29, 00:43:19</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/28/" title="数据迁移中，敬请期待！">http://www.zhoujianwen.cn/2016/08/28/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.zhoujianwen.cn/2016/08/28/　　作者: zhoujianwen" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/08/29/">
+                    第一次和大家见面
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/05/05/">
+                    css+div解决文字溢出控制显示字数
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据迁移中，敬请期待！"><span class="toc-number">1.</span> <span class="toc-text">数据迁移中，敬请期待！</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"数据迁移中，敬请期待！　| 小舟技术博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="SOHUCS" sid="http://www.zhoujianwen.cn/2016/08/28/" >
+<script type="text/javascript">
+    (function(){
+        var appid = 'cysF0oFT5';
+        var conf = 'prod_35f5d9cbd64582245565bf5f5934dafd';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/08/29/" title="上一篇: 第一次和大家见面">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/05/05/" title="下一篇: css+div解决文字溢出控制显示字数">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/22/">拉格朗日中值定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/21/">罗尔定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/20/">零点定理学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/12/">JavaScript创建对象之理解原型对象(笔记4)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/">JavaScript创建对象之理解原型对象(笔记3)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/10/">JavaScript创建对象之构造函数模式(笔记2)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/08/">JavaScript创建对象之工厂模式(笔记1)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/08/">ECMAScript属性类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/07/">各大互联网公司前端笔试面试题–JavaScript篇(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/06/">Web异步交互技术之iframe</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/">html页头设置不缓存</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/04/">GitHub配置与使用总结(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/03/">七牛的qrsbox命令行工具使用 for osx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/02/">VirtualBox在OSX下无法识别U盘，提示Failed to create a proxy device for the USB device. (Error: VERR_PDM_NO_USB_PORTS).</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/30/">sublime基本介绍和使用技巧(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/">第一次和大家见面</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/">数据迁移中，敬请期待！</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/05/">css+div解决文字溢出控制显示字数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/">js的defer属性对dom加载的影响</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/29/">Web前端开发学习教程</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <style>
+    i.police{  
+    display: inline-block;
+  width: 14px;
+  height: 16px;
+  margin-right: 6px;
+  background: url('https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/icon-police.png?v=md5') 0 0 no-repeat;
+  vertical-align: middle;
+  margin-top: -4px;
+</style>
+<footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+           <p>
+                CopyRight <i class="fa fa-copyright"></i> 
+                2015-2017
+                <a href="http://www.zhoujianwen.cn" target="_blank">小舟技术博客</a>
+                Powered by <a href="http://github.com/zhoujianwen" target="_blank">zhoujianwen</a>
+               <a href="http://www.miitbeian.gov.cn/" target="_blank"><i class="police"></i>粤ICP备15023524号-1</a>
+            </p>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<!-- @zhoujianwen-->
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
